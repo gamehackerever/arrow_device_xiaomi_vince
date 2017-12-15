@@ -339,6 +339,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     spectrum.support=1 \
     persist.spectrum.kernel=Parallax
 
+
 # Zygote preforking
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Fling Velocity
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.min.fling_velocity=160 \
+ro.max.fling_velocity=20000
