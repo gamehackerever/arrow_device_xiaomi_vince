@@ -690,4 +690,7 @@
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
     <bool name="config_camera_sound_forced">false</bool>
 
+    <!-- Delay that allows some content to arrive at the display before switching
+         from DOZE to ON, in millis. -->
+    <integer name="config_wakeUpDelayDoze">32</integer>
 </resources>
