@@ -2,3 +2,6 @@ allow platform_app system_app_data_file:dir getattr;
 
 # FPS tile
 allow platform_app sysfs_fps:file { getattr open read };
+
+#Torch Brightness
+allow platform_app sysfs_leds:dir search;
