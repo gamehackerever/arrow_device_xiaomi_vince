@@ -3,3 +3,6 @@ persist.vendor.camera.dbglog    u:object_r:camera_prop:s0
 wifi.active.interface           u:object_r:wifi_prop:s0
 sys.fp.goodix					u:object_r:fingerprint_prop:s0
 sys.fp.vendor					u:object_r:fingerprint_prop:s0
+
+# Spectrum
+persist.spectrum.profile                      u:object_r:spectrum_prop:s0
