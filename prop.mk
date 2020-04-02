@@ -255,7 +255,13 @@ wifi.interface=wlan0
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.wfd.virtual=10
 
-# havocOS maintainer
+# Dirac algo tsx 9/12
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.havoc.maintainer=KenHV
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1
 
+# Dirac headset effect
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true
