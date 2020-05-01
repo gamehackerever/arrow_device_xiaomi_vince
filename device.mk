@@ -34,7 +34,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/pixel
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -314,7 +315,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.vince-libperfmgr
+    android.hardware.power@1.3-service.vince-libperfmgr \
+    android.hardware.power.stats@1.0-service.pixel
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
