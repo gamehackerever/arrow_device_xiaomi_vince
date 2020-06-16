@@ -324,6 +324,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.xiaomi_parts.rc \
     ueventd.qcom.rc \
+    init.spectrum.rc \
+    init.spectrum.sh \
     init.gpuboost.rc \
     init.gpuboost.sh \
     init.cpuboost.rc \
