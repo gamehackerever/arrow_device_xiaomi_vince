@@ -1,2 +1,4 @@
 # Power HAL
 allow hal_perf_default device:file r_file_perms;
+allow hal_perf_default system_server:file { open read };
+allow hal_perf_default system_server:dir { open read search };
