@@ -1,5 +1,12 @@
 allow platform_app system_app_data_file:dir getattr;
 allow platform_app sysfs_kgsl:lnk_file read;
+allow platform_app app_data_file:file rx_file_perms;
+allow platform_app boottime_prop:file { read open getattr };
+
+# Face Unlock
+get_prop(platform_app, camera_prop)
+
+# FPS
 allow platform_app sysfs_fps:file { getattr open read };
 
 #Torch Brightness
