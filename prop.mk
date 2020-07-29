@@ -74,6 +74,7 @@ vidc.enc.dcvs.extra-buff-count=2 \
 persist.camera.HAL3.enabled=1 \
 persist.camera.eis.enable=1 \
 persist.camera.CDS=off \
+vendor.camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCamera \
 vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
 
 # Cne
