@@ -48,6 +48,14 @@ bluetooth.hfp.client=1 \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
 
+# Bettery Improvement Tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.audio.flinger_standbytime_ms=300 \
+pm.sleep_mode=1 \
+ro.ril.disable.power.collapse=1 \
+ro.mot.eri.losalert.delay=1000 \
+wifi.supplicant_scan_interval=300
+
 # CAF props
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.memperf.enable=false \
@@ -193,12 +201,25 @@ vendor.vidc.dec.downscalar_width=1920 \
 vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
-vendor.video.disable.ubwc=1
+vendor.video.disable.ubwc=1 \
+ro.media.dec.jpeg.memcap=8000000 \
+ro.media.enc.hprof.vid.bps=8000000 \
+ro.media.enc.jpeg.quality=100 \
+ro.media.dec.aud.wma.enabled=1 \
+ro.media.dec.vid.wmv.enabled=1
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.fw.dex2oat_thread_count=8 \
 ro.vendor.extension_library=libqti-perfd-client.so
+
+# Memory Optimization
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.am.reschedule_service=true \
+ro.vendor.qti.sys.fw.bservice_limit=5 \
+ro.vendor.qti.sys.fw.bservice_age=5000 \
+ro.sys.fw.use_trim_settings=true
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -218,6 +239,15 @@ persist.vendor.radio.nitz_sons_1="" \
 persist.vendor.radio.nitz_sons_2="" \
 persist.vendor.radio.nitz_sons_3=""
 
+# QTI Performance
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.enable_prefetch=1 \
+vendor.iop.enable_uxe=1 \
+vendor.iop.enable_prefetch_ofr=1 \
+vendor.perf.iop_v3.enable=1 \
+ro.vendor.at_library=libqti-at.so \
+persist.vendor.qti.games.gt.prof=1
+
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.va_aosp.support=1 \
@@ -228,7 +258,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PROVISIONED=1 \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
+persist.dbg.ims_volte_enable=1 \
 persist.dbg.wfc_avail_ovr=1 \
+persist.radio.rat_on=combine \
+persist.radio.data_ltd_sys_ind=1 \
+persist.radio.data_con_rprt=1 \
+persist.radio.calls.on.ims=1 \
 persist.radio.multisim.config=dsds \
 persist.sys.fflag.override.settings_network_and_internet_v2=true \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
@@ -266,7 +301,8 @@ net.tcp.2g_init_rwnd=10
 
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
-sys.use_fifo_ui=1
+sys.use_fifo_ui=1 \
+view.scroll_friction=0
 
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
