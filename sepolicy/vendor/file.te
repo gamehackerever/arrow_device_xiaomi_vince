@@ -54,3 +54,5 @@ type sysfs_vddrestrict, sysfs_type, fs_type;
 
 # HW QS info
 type sysfs_info, fs_type, sysfs_type;
+
+type sysfs_dex2oat, sysfs_type, fs_type;
