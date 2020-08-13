@@ -1,4 +1,4 @@
-# Camera
+ # Camera
 type camera_socket, file_type, data_file_type;
 
 # Fingerprint
@@ -51,3 +51,6 @@ type sysfs_touchboost, sysfs_type, fs_type;
 type sysfs_msmthermal, sysfs_type, fs_type;
 type sysfs_corecontrol, sysfs_type, fs_type;
 type sysfs_vddrestrict, sysfs_type, fs_type;
+
+# HW QS info
+type sysfs_info, fs_type, sysfs_type;
