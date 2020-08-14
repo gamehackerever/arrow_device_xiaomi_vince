@@ -210,8 +210,7 @@ ro.media.dec.vid.wmv.enabled=1
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.sys.fw.dex2oat_thread_count=8 \
-ro.vendor.extension_library=libqti-perfd-client.so
+ro.sys.fw.dex2oat_thread_count=8
 
 # Memory Optimization
 PRODUCT_PROPERTY_OVERRIDES += \
