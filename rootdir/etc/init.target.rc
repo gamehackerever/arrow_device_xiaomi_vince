@@ -224,6 +224,13 @@ on boot
     write /sys/devices/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 1
     write /sys/module/lpm_levels/parameters/sleep_disabled N
 
+# Smart Charging
+on boot
+   chown system system /sys/class/power_supply/battery/charging_enabled
+   chmod 0666 /sys/class/power_supply/battery/charging_enabled
+   chown system system /sys/class/power_supply/battery/input_suspend
+   chmod 0666 /sys/class/power_supply/battery/input_suspend
+
 # access permission for wlan
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
