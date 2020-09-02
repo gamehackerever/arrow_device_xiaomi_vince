@@ -49,3 +49,6 @@ BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200805.001/6578210:user/release
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
+
+# OTA Build
+export FORCE_OTA=true
