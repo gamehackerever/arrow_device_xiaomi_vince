@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The ancientOS Project
+# Copyright (C) 2020 The arrowOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,18 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
-# Inherit some common ancient stuff.
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
-
-# Google Recorder
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+# Inherit some common arrow stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Google Recorder
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
-PRODUCT_NAME := ancient_vince
+PRODUCT_NAME := arrow_vince
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
 PRODUCT_MANUFACTURER := Xiaomi
@@ -50,5 +47,3 @@ BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200805.001/6578210:user/release
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 
-# OTA Build
-export FORCE_OTA=true
